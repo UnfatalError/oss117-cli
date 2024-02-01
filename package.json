@@ -1,0 +1,29 @@
+{
+  "name": "oss117-cli",
+  "description": "",
+  "version": "1.0.1",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "node -p \"'export const LIB_VERSION = ' + JSON.stringify(require('./package.json').version) + ';'\" > src/version.ts",
+    "build": "tsc",
+    "dev": "tsc -w",
+    "start": "tsc && node dist/index.js"
+  },
+  "bin": {
+    "oss117": "dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UnfatalError/oss117-cli"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "commander": "^11.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
